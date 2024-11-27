@@ -1,0 +1,75 @@
+{
+  "name": "vue-dataset",
+  "description": "A vue 3 component to display datasets with filtering, paging and sorting capabilities!",
+  "version": "0.0.0-semantic-release",
+  "author": "Giannis Koutsaftakis",
+  "license": "MIT",
+  "repository": "https://github.com/kouts/vue-dataset",
+  "packageManager": "pnpm@9.12.0",
+  "type": "module",
+  "keywords": [
+    "vue",
+    "component",
+    "dataset",
+    "datatable"
+  ],
+  "main": "./dist/vue-dataset.umd.js",
+  "module": "./dist/vue-dataset.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-dataset.es.js",
+      "require": "./dist/vue-dataset.umd.js"
+    }
+  },
+  "unpkg": "dist/vue-dataset.umd.js",
+  "sideEffects": [
+    "./**/*.scss",
+    "./vuepress-plugin-vue-example/**/*.vue",
+    "./docs/**/*.vue"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "serve": "vite preview",
+    "build": "vite build",
+    "test:unit": "vitest",
+    "test:unit-coverage": "vitest run --coverage && make-coverage-badge --output-path ./coverage/badge-next.svg",
+    "lint": "eslint \"**/*.{vue,ts,js}\"",
+    "lint-fix": "eslint --fix \"**/*.{vue,ts,js}\"",
+    "prepare": "husky",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@kouts/eslint-config": "^1.3.14",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "@vitest/coverage-v8": "^2.1.2",
+    "@vue/compiler-sfc": "^3.4.38",
+    "@vue/test-utils": "^2.4.6",
+    "@vuepress/bundler-vite": "2.0.0-rc.15",
+    "@vuepress/plugin-docsearch": "2.0.0-rc.41",
+    "@vuepress/plugin-register-components": "2.0.0-rc.37",
+    "@vuepress/theme-default": "^2.0.0-rc.41",
+    "bootstrap": "^4.6.2",
+    "eslint": "^9.11.1",
+    "husky": "^9.1.6",
+    "jsdom": "^25.0.1",
+    "lint-staged": "^15.2.10",
+    "make-coverage-badge": "^1.2.0",
+    "prettier": "3.3.3",
+    "prismjs": "^1.29.0",
+    "sass": "~1.77.8",
+    "vite": "^5.4.8",
+    "vite-plugin-html": "^3.2.2",
+    "vitest": "^2.1.2",
+    "vue-router": "^4.4.5",
+    "vuepress": "2.0.0-rc.15",
+    "vuepress-plugin-vue-example": "3.0.17",
+    "vuex": "^4.1.0"
+  },
+  "resolutions": {
+    "@typescript-eslint/utils": "^8.0.0",
+    "vuepress": "2.0.0-rc.15"
+  }
+}
